@@ -1,12 +1,12 @@
 # vincere-test
 
-## Question 1
+# Question 1
 
-### 1. Introduction
+## 1. Introduction
 
 Before go deeper into the Architecture, I will break down the requirements into smaller problems or possible recommendations based on but not limited to my own knowledge at the time of writing this (I may have forgotten some important things).
 
-### 2. Requirements
+## 2. Requirements
 
 > scaling to meet the demand, but with uncertainty around when and how much this demand will be they are very concerned about buying too much infrastructure too soon or not enough too late!
 
@@ -112,28 +112,28 @@ Before go deeper into the Architecture, I will break down the requirements into 
 
 - Infrastructure as code (e.g. Terraform, Pulumi, Cloudformation for AWS)
 
-### 3. Architecture
+## 3. Architecture
 
 I will use the multi-region architecture on AWS
 
-## Question 2
+# Question 2
 
-## Question 3
+# Question 3
 
-## Question 4
+# Question 4
 
-## Question 5
+# Question 5
 
-## Question 6
+# Question 6
 
-## Question 7
+# Question 7
 
-## Question 8
+# Question 8
 
-## Question 9
+# Question 9
 
-## Question 10
+# Question 10
 
-## Question 11
+# Question 11
 
-## Question 12
+# Question 12
