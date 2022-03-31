@@ -118,6 +118,27 @@ I will use the multi-region architecture on AWS
 
 # Question 2
 
+Not sure why the test should be this comlicated since we cannot [change immutable object in Python](https://stackoverflow.com/questions/45111055/modifying-function-arguments)
+
+Idea:
+  - Read the files line by line
+  - How to count legal word in one line:
+    - Split the line by white space
+    - Match the legal word
+    - Check the remaining if there is any special characters:
+      - If None then count as a legal word
+  - How to count legal number in one line:
+    - Split the line by white space
+    - Match the legal number
+    - Check if there is any special characters rather than the legal number:
+      - If None then count as a legal number
+
+Limitation:
+  - O(n^2)
+  - Cannot edit python immutable object
+  - Have not yet checked any other test cases
+  - Space is limited by Python variable capacity, large files with large lines can crash
+
 # Question 3
 
 This github account, but nothing useful for reference since I don't have any contribution.
@@ -224,11 +245,11 @@ DevOps is to break the silos between dev team and ops team where ops people don'
 - The project has some positive outcomes:
   - Restruturing git repository for other team rather than the DevOps team to manage Kubernetes resources/custom resources. We have different git repository for different namespaces/teams.
   - Moving away from the deprecated flux version 1.
-  - Enhance the team knowledge of reading Go toolkit components, reading Go lang codes to configure the custom resources.
+  - Enhance the team knowledge of reading Go toolkit components, reading Go lang code to configure the custom resources.
 
 # Question 10
 
-- Deploy the database servers in the Database subnet (same as private subnet but with Network ACL that allow only connection on the port of the Database)
+- Deploy the database servers in the Database subnet (same as private subnet but with Network ACL that allows only connection on the port of the Database)
 - Resize this Database subnet for only a few IPs (e.g. with /26 or /27) that could obtain since we don't want anyone to deploy more Database rather than we are currently using.
 - Security groups for allowing connections from the applications.
 
