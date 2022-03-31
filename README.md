@@ -139,6 +139,13 @@ Limitation:
   - Have not yet checked any other test cases
   - Space is limited by Python variable capacity, large files with large lines can crash
 
+Python used
+
+```
+python3 --version
+Python 3.8.10
+```
+
 # Question 3
 
 This github account, but nothing useful for reference since I don't have any contribution.
