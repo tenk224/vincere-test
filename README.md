@@ -120,20 +120,122 @@ I will use the multi-region architecture on AWS
 
 # Question 3
 
+This github account, but nothing useful for reference since I don't have any contribution.
+
 # Question 4
+
+DevOps is to break the silos between dev team and ops team where ops people don't understand the applications' behaviour and dev people don't understand how their apps get deployed. We can discuss more if you want to go deep dive.
 
 # Question 5
 
+- Container runtime:
+  - Docker
+  - Containerd
+- Container orchestration:
+  - Kubernetes
+- Container Network Interface:
+  - Calico
+- Container Storage Interface driver:
+  - Rook Ceph
+  - AWS EBS
+- Continuous Integration:
+  - Gitlab ci, Kubernetes Gitlab runner
+  - Kaniko (building image within a container and skip the login to image repository)
+  - Bitbucket Pipeline
+  - Jenkins
+- Continuous Deployment/Delivery:
+  - Fluxcd (GitOps for Kubernetes):
+    - Source controller: libgit2 for Bitbucket.
+    - Helm controller.
+    - Kustomization controller: struturing git repository.
+    - Image Automation controller: update image tag to git repository.
+    - Image Reflector controller: scan image repository to get new tag.
+    - Notification controller: notification for Fluxcd objects like Helm Release, Image Policy...
+  - Ansible
+- Configuration management:
+  - Ansible
+- Kubernetes deployment:
+  - Kubespray (collection of Ansible playbook)
+  - kOps
+  - Eksctl 
+- Infrastructure as Code:
+  - Terraform
+  - Pulumi
+- Cloud provider:
+  - AWS
+  - GCP
+  - Aliyun (Alibaba cloud in mainland china)
+- Monitoring/Logging/Alerting/Dashboard:
+  - Prometheus
+  - Grafana
+  - Loki
+  - Promtail
+- Kuberentes auto scaling:
+  - Cluster autoscaler
+- Secrets for Kubernetes:
+  - SealedSecret
+  - Vault (researching)
+- AWS IAM roles:
+  - Kube2IAM
+  - Kube2RAM (Aliyun)
+  - IAM role for service account
+  - OIDC for Bitbucket
+- Kubernetes manifest template:
+  - Helm
+
 # Question 6
+
+- Continuous Integration/Continuous Deployment/Delivery
+- Already listed in the question 5. If you want to discuss deeper please take it to the interview since I don't know what depth of the aspect you are interested in.
 
 # Question 7
 
+- Cloud provider:
+  - AWS
+  - GCP
+  - Aliyun (Alibaba cloud in mainland china)
+  - Tencent cloud (only creat a machine)
+- The one I like the most:
+  - AWS
+- Reasons:
+  - I work with AWS the most, and AWS is fairly large and mature enough in terms of Cloud provider.
+  - GCP console is so hard to self navigate, need to read documents back and forth.
+  - Aliyun has a lot of bugs that I needed to contact the support team for solving the problems.
+  - Have not yet used Azure.
+
 # Question 8
+
+- Containers are processes running on a machine which contains the packed applications and dependencies.
+- Advantages:
+  - Lightweight:
+    - No resource overhead to init the whole operating system
+    - Faster to terminate/kill
+    - Only consume the required resource (CPU/RAM)
+  - Isolate application environment:
+    - Different applications running on different libraries/dependencies without interfering with each other on the same machine
+- Disavantages:
+  - Overhead for system calls since it will go through a container runtime (comparing deploying to a container on a machine or deploy directly to that same machine). But most applications will not suffer from this anyway.
+- I use container in Kubernetes, Bitbucket Pipeline, Docker compose.  
 
 # Question 9
 
+- Migrating fluxcd version 1 to version 2.
+- My role was the project owner.
+- The project has some positive outcomes:
+  - Restruturing git repository for other team rather than the DevOps team to manage Kubernetes resources/custom resources. We have different git repository for different namespaces/teams.
+  - Moving away from the deprecated flux version 1.
+  - Enhance the team knowledge of reading Go toolkit components, reading Go lang codes to configure the custom resources.
+
 # Question 10
+
+- Deploy the database servers in the Database subnet (same as private subnet but with Network ACL that allow only connection on the port of the Database)
+- Resize this Database subnet for only a few IPs (e.g. with /26 or /27) that could obtain since we don't want anyone to deploy more Database rather than we are currently using.
+- Security groups for allowing connections from the applications.
 
 # Question 11
 
+- Not yet, please enlighten me.
+
 # Question 12
+
+- I have a mindset of continuous learning, doubting my own knowledge to keep those in check and up-to-date. If these sound like you, I maybe the one you need.
