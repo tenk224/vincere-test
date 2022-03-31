@@ -238,4 +238,4 @@ DevOps is to break the silos between dev team and ops team where ops people don'
 
 # Question 12
 
-- I have a mindset of continuous learning, doubting my own knowledge to keep those in check and up-to-date. If these sound like you, I maybe the one you need.
+- I have a mindset of continuous learning, doubting my own knowledge to keep these in check and up-to-date. If those sound like you, I maybe the one you need.
