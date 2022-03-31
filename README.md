@@ -124,13 +124,12 @@ Idea:
   - Read the files line by line
   - How to count legal word in one line:
     - Split the line by white space
-    - Match the legal word
-    - Check the remaining if there is any special characters:
+    - Check the remaining if there is any special characters including numbers by this regex `[^A-Za-z]+`:
       - If None then count as a legal word
   - How to count legal number in one line:
     - Split the line by white space
-    - Match the legal number
-    - Check if there is any special characters rather than the legal number:
+    - Match the legal number by this regex `(-|)[0-9]+`
+    - Check if there is any special characters rather than the legal number by this regex `[^-|^0-9]`:
       - If None then count as a legal number
 
 Limitation:
