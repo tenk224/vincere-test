@@ -53,7 +53,7 @@ Before go deeper into the Architecture, I will break down the requirements into 
     - Since most of the applications will read more than write, the master node will execute the write queries and the slave will execute the read queries.
     - When one or more slave nodes are down, the read queries will then be shifted to the master node.
     - When the master node is down, the other slave will elect a new master.
-    - Mult-master architecture is comlicated as we will need network file system for storing all masters' data and possible network lag issues.
+    - Multi-master architecture is comlicated as we will need network file system for storing all masters' data and possible network lag issues.
   - Use cache to serve frequent read query's results.
 
 > making the user experience in the browser very low latency even though a large portion of their user base will be from far away
@@ -90,8 +90,8 @@ Before go deeper into the Architecture, I will break down the requirements into 
 - Define and tune healthcheck settings for applications:
   - Either TCP or HTTP
 - Base on the healthcheck status to know whether the application is running or crashed to keep it or destroy it and spin up another resources
-- Have a application replica of at least 2.
-- Define a policy where the destroying an instance or spin a new instance.
+- Have an application replica of at least 2.
+- Define a policy where to destroy an instance or spin up a new instance.
 
 > security of data at rest and in transit
 
