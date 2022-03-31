@@ -256,8 +256,8 @@ DevOps is to break the silos between dev team and ops team where ops people don'
 # Question 10
 
 - Deploy the database servers in the Database subnet (same as private subnet but with Network ACL that allows only connection on the port of the Database)
-- Resize this Database subnet for only a few IPs (e.g. with /26 or /27) that could obtain since we don't want anyone to deploy more Database rather than we are currently using.
-- Security groups for allowing connections from the applications.
+- Resize this Database subnet for only a few IPs (e.g. with /26 or /27) that could obtain since we don't want anyone to deploy more Database rather than the ones we are currently using.
+- Security groups for allowing connections only from the desired applications.
 
 # Question 11
 
