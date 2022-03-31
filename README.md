@@ -91,7 +91,7 @@ Before go deeper into the Architecture, I will break down the requirements into 
   - Either TCP or HTTP
 - Base on the healthcheck status to know whether the application is running or crashed to keep it or destroy it and spin up another resources
 - Have an application replica of at least 2.
-- Define a policy where to destroy an instance or spin up a new instance.
+- Define a policy when to destroy an instance or spin up a new instance.
 
 > security of data at rest and in transit
 
